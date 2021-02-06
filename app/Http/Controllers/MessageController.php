@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\User;
 use Twilio\Rest\Client;
 
+use Illuminate\Http\Form;
+
 class MessageController extends Controller
 {
     public function __construct()
@@ -23,6 +25,8 @@ class MessageController extends Controller
     public function chat(Request $request, $ids)
     {
         $authUser = $request->user();
+
+        $authUser->channelName = '1-2'; 
 
         $otherUser = User::find(explode('-', $ids)[1]);
         $users = User::where('id', '<>', $authUser->id)->get();

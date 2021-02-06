@@ -1982,8 +1982,8 @@ __webpack_require__.r(__webpack_exports__);
                 });
               });
               _context4.next = 6;
-              return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(client.getChannelByUniqueName("".concat(this.authUser.id, "-").concat(this.otherUser.id)));
-
+// return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(client.getChannelByUniqueName("".concat(this.authUser.id, "-").concat(this.otherUser.id))); //  Commented at 19 dec 
+return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(client.getChannelByUniqueName("".concat(this.authUser.channelName,"")));
             case 6:
               this.channel = _context4.sent;
               this.channel.on("messageAdded", function (message) {

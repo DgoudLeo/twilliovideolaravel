@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-3" style="display: none;">
                 @include('messages.shared.users')
             </div>
             <div class="col-md-9">

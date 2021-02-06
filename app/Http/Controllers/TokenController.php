@@ -13,7 +13,7 @@ class TokenController extends Controller
         $token = new AccessToken(
             env('TWILIO_AUTH_SID'),
             env('TWILIO_API_SID'),
-            env('TWILIO_API_SECRET'),
+            env('TWILIO_API_CHAT_SECRET'),
             3600,
             $request->email
         );

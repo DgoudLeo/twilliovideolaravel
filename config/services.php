@@ -29,5 +29,13 @@ return [
         'secret' => env('AWS_SECRET_ACCESS_KEY'),
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
+      // sid and token are needed to access the standard Twilio Rest API
+    // key and secret are additionally needed to access the Twilio Video API
+    'twilio' => [
+        'sid' => env('TWILIO_AUTH_SID'),
+        'token' => env('TWILIO_AUTH_TOKEN'),
+        'key' => env('TWILIO_API_KEY'),
+        'secret' => env('TWILIO_API_VIDEO_SECRET')
+    ]
 
 ];

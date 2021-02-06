@@ -66,8 +66,12 @@ export default {
                 client.updateToken(token);
             });
 
-            this.channel = await client.getChannelByUniqueName(
+            <!--  this.channel = await client.getChannelByUniqueName(
                 `${this.authUser.id}-${this.otherUser.id}`
+            ); -->
+
+             this.channel = await client.getChannelByUniqueName(
+                `${this.authUser.channelName}`
             );
 
             this.channel.on("messageAdded", message => {
